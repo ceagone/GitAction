@@ -7,6 +7,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+        - name: CHeckout Repo
+          uses: actions/checkout@v4
+        
         - name: Echo something out
           run: echo "Bola this is your first Github Action Workflow"
         
