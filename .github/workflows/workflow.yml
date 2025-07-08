@@ -10,11 +10,8 @@ jobs:
         - name: CHeckout Repo
           uses: actions/checkout@v4
         
-        - name: Echo something out
-          run: echo "Bola this is your first Github Action Workflow"
-        
-        - name: List files
-          run: ls
-        
-        - name: Read the ReadMe file
-          run: cat README.md
+        - name: Run the below list of commands
+          run: | 
+            echo "Bola this is your first Github Action Workflow"
+            ls
+            cat README.md
