@@ -1,0 +1,17 @@
+name: Example Checkbox Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_extra_tests:
+        description: 'Run extra tests?'
+        type: boolean
+        required: false
+        default: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show input value
+        run: echo "Run extra tests? ${{ github.event.inputs.run_extra_tests }}"
